@@ -49,10 +49,12 @@ export default function App() {
 	};
 
 	return (
+    // Container for the screen
 		<View style={styles.container}>
+      {/* Container for search and add button */}
 			<View style={{  display:'flex', flexDirection:'row' }}>
 				<View style={{
-          flexGrow:1, padding:8
+          flexGrow:2, padding:8
         }}>
           {/* Search Bar  */}
 					<SearchInput

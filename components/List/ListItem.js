@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
 		borderRadius: 10,
 	},
 });
+//ListItem Component to show the items in a list
 
 const ListItem = ({ item }) => {
 	return (
