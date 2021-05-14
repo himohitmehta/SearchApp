@@ -4,7 +4,7 @@ import { TextInput, View } from "react-native";
 // Search input Component
 const SearchInput = ({ onChangeText }) => {
 	return (
-		<View  >
+		<View>
 			<TextInput
 				placeholder="Search..."
 				onChangeText={onChangeText}

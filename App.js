@@ -6,10 +6,9 @@ import ListItem from "./components/List/ListItem";
 
 const styles = StyleSheet.create({
 	container: {
-		
 		backgroundColor: "#fff",
-    padding:40
-  }
+		padding: 40,
+	},
 });
 
 // list of items
@@ -20,9 +19,9 @@ const data = [
 	{ text: "Bring that table", key: "4" },
 	{ text: "Watch Cricket", key: "5" },
 	{ text: "Sleep", key: "6" },
-  { text: "Listen Music", key: "7" },
-  { text: "Run", key: "8" },
-  { text: "Learn Something New", key: "9" },
+	{ text: "Listen Music", key: "7" },
+	{ text: "Run", key: "8" },
+	{ text: "Learn Something New", key: "9" },
 ];
 
 export default function App() {
@@ -49,30 +48,35 @@ export default function App() {
 	};
 
 	return (
-    // Container for the screen
+		// Container for the screen
 		<View style={styles.container}>
-      {/* Container for search and add button */}
-			<View style={{  display:'flex', flexDirection:'row' }}>
-				<View style={{
-          flexGrow:2, padding:8
-        }}>
-          {/* Search Bar  */}
+			{/* Container for search and add button */}
+			<View style={{ display: "flex", flexDirection: "row" }}>
+				<View
+					style={{
+						flexGrow: 2,
+						padding: 8,
+					}}
+				>
+					{/* Search Bar  */}
 					<SearchInput
 						onChangeText={(text) => {
 							searchUser(text);
 						}}
 					/>
 				</View>
-				<View style={{
-          flexGrow:1,
-          padding:8
-        }}>
-          {/* Add Button */}
+				<View
+					style={{
+						flexGrow: 1,
+						padding: 8,
+					}}
+				>
+					{/* Add Button */}
 					<AddButton data={words} submitHandler={submitHandler} />
 				</View>
 			</View>
 			<View>
-        {/* List of items */}
+				{/* List of items */}
 				<FlatList
 					data={wordFilter}
 					renderItem={({ item }) => <ListItem item={item} />}
